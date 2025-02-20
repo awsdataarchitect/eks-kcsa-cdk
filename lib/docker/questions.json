@@ -1,0 +1,68 @@
+[
+    {
+        "question": "Which STRIDE component addresses unauthorized workload creation via stolen credentials?",
+        "options": [
+            {"text": "Spoofing", "is_correct": false, "explanation": "Spoofing refers to impersonation but does not directly address unauthorized workload creation."},
+            {"text": "Tampering", "is_correct": false, "explanation": "Tampering involves unauthorized modifications, not workload creation."},
+            {"text": "Elevation of Privilege", "is_correct": true, "explanation": "Elevation of Privilege directly addresses unauthorized access and actions like workload creation."},
+            {"text": "Information Disclosure", "is_correct": false, "explanation": "Information Disclosure relates to unauthorized data exposure, not workload creation."}
+        ],
+        "overall_explanation": "This component focuses on attackers gaining higher levels of access, leading to unauthorized workload creation.",
+        "domain": "Overview of Cloud Native Security"
+    },
+    {
+        "question": "Which statement about Kubernetes Secrets is true?",
+        "options": [
+            {"text": "Secrets are accessible only to cluster administrators.", "is_correct": false, "explanation": "Secrets access is managed through RBAC, not limited to administrators."},
+            {"text": "Secrets can be securely managed using external tools like Vault.", "is_correct": true, "explanation": "External tools like HashiCorp Vault provide enhanced security for managing secrets."},
+            {"text": "Secrets are stored in plaintext within Pod specifications.", "is_correct": false, "explanation": "Secrets are stored separately in etcd and not in plaintext within Pods."},
+            {"text": "Secrets are encrypted by default in etcd.", "is_correct": false, "explanation": "Secrets are only base64-encoded by default, not encrypted."}
+        ],
+        "overall_explanation": "Secrets should be integrated with external tools (e.g., HashiCorp Vault) for enhanced security.",
+        "domain": "Kubernetes Security Fundamentals"
+    },
+    {
+        "question": "What is the primary purpose of the Kubernetes API server?",
+        "options": [
+            {"text": "To schedule pods on nodes", "is_correct": false, "explanation": "This is the role of the scheduler, not the API server."},
+            {"text": "To manage container runtime", "is_correct": false, "explanation": "The container runtime is managed by the kubelet, not the API server."},
+            {"text": "To expose the Kubernetes API", "is_correct": true, "explanation": "The API server is the central management entity that exposes the Kubernetes API."},
+            {"text": "To monitor node health", "is_correct": false, "explanation": "Node health monitoring is primarily done by the kubelet and kube-proxy."}
+        ],
+        "overall_explanation": "The API server is crucial for cluster management and should be properly secured.",
+        "domain": "Kubernetes Cluster Component Security"
+    },
+    {
+        "question": "Which Kubernetes component is responsible for enforcing network policies?",
+        "options": [
+            {"text": "kube-proxy", "is_correct": false, "explanation": "kube-proxy manages service networking, not network policies."},
+            {"text": "kubelet", "is_correct": false, "explanation": "The kubelet manages containers on nodes but doesn't enforce network policies."},
+            {"text": "CNI plugin", "is_correct": true, "explanation": "Container Network Interface (CNI) plugins implement network policies."},
+            {"text": "etcd", "is_correct": false, "explanation": "etcd is the cluster's database, not responsible for network policy enforcement."}
+        ],
+        "overall_explanation": "Understanding network policy enforcement is crucial for securing pod-to-pod communication.",
+        "domain": "Kubernetes Threat Model"
+    },
+    {
+        "question": "What is a key consideration when implementing pod security policies?",
+        "options": [
+            {"text": "They only apply to newly created pods", "is_correct": false, "explanation": "Pod security policies apply to all pods, not just new ones."},
+            {"text": "They can restrict the use of host namespaces", "is_correct": true, "explanation": "Pod security policies can indeed restrict the use of host namespaces for improved isolation."},
+            {"text": "They are enabled by default in Kubernetes", "is_correct": false, "explanation": "Pod security policies are not enabled by default and require explicit configuration."},
+            {"text": "They can only be applied cluster-wide", "is_correct": false, "explanation": "Pod security policies can be applied at both cluster and namespace levels."}
+        ],
+        "overall_explanation": "Pod security policies are a powerful tool for enforcing security standards across pods.",
+        "domain": "Platform Security"
+    },
+    {
+        "question": "Which compliance framework is specifically designed for cloud service providers?",
+        "options": [
+            {"text": "PCI DSS", "is_correct": false, "explanation": "PCI DSS is for payment card industry, not specifically for cloud providers."},
+            {"text": "HIPAA", "is_correct": false, "explanation": "HIPAA is for healthcare data protection, not cloud-specific."},
+            {"text": "CSA STAR", "is_correct": true, "explanation": "Cloud Security Alliance (CSA) STAR is designed for assessing security of cloud services."},
+            {"text": "ISO 27001", "is_correct": false, "explanation": "ISO 27001 is a general information security standard, not cloud-specific."}
+        ],
+        "overall_explanation": "Understanding cloud-specific compliance frameworks is important for cloud-native security.",
+        "domain": "Compliance and Security Frameworks"
+    }
+]
