@@ -1,8 +1,8 @@
 {
-  "name": "eks-kcsa-cks",
+  "name": "eks-kcsa-cdk",
   "version": "0.1.0",
   "bin": {
-    "lambda-ollama-deepseek": "bin/eks-kcsa-cks.js"
+    "eks-kcsa-cks": "bin/eks-kcsa-cks.js"
   },
   "scripts": {
     "build": "tsc",
